@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     0,0,color,0,0,
                     0,0,0,1,0};
             ColorMatrix cm=new ColorMatrix(array);
-            if(satur==0)cm.setSaturation(satur);// 위치 여기다가!!
+            if(satur==0)cm.setSaturation(satur);
             paint.setColorFilter(new ColorMatrixColorFilter(cm));
 
             Bitmap picture= BitmapFactory.decodeResource(getResources(),R.drawable.img01);

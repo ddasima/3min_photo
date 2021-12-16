@@ -54,7 +54,7 @@ public class PhotoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.btn_photo:
-                        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                        Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
                         startActivityForResult(cameraIntent, TAKE_PICTURE);
                         break;
                 }
@@ -70,7 +70,7 @@ public class PhotoActivity extends AppCompatActivity {
         Log.d(TAG, "onRequestPermissionsResult");
         if(grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] ==
         PackageManager.PERMISSION_GRANTED) {
-            Log.d(TAG, "Permission: " + permissions[0] + "waw " + grantResults[0]);
+            Log.d(TAG, "Permission: " + permissions[0] + "was " + grantResults[0]);
         }
     }
 
